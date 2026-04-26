@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import { updateBooking } from '../../services/api';
@@ -6,7 +6,7 @@ import { updateBooking } from '../../services/api';
 const JobDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [job, setJob] = useState({
+  const [job] = useState({
     parentName: 'John Doe',
     age: 75,
     healthConditions: 'Diabetes, High BP',

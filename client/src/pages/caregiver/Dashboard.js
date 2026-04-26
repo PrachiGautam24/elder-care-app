@@ -76,7 +76,8 @@ const CaregiverDashboard = () => {
     setServiceRequests(serviceRequests.map(req => req.id === patient.id ? { ...req, status: 'accepted' } : req));
   };
 
-  const declineRequest = (id) => {
+  // declineRequest kept for future use
+  const declineRequest = (id) => { // eslint-disable-line no-unused-vars
     setServiceRequests(serviceRequests.map(req => req.id === id ? { ...req, status: 'declined' } : req));
   };
 

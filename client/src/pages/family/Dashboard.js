@@ -9,7 +9,7 @@ const FamilyDashboard = () => {
   const [parents, setParents] = useState([]);
   const [selectedParent, setSelectedParent] = useState('');
   const [careItems, setCareItems] = useState([]);
-  const [notifications, setNotifications] = useState([]);
+  const [notifications] = useState([]);
   const [showNotifications, setShowNotifications] = useState(false);
   const [careForm, setCareForm] = useState({
     type: 'medication', priority: 'high', title: '', description: '',

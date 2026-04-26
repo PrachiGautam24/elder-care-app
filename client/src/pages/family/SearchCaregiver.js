@@ -46,7 +46,7 @@ const SearchCaregiver = () => {
       }
     };
     loadNeeds();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handlePostNeed = async (e) => {
     e.preventDefault();

@@ -19,7 +19,7 @@ const NurseDashboard = () => {
   const [patients, setPatients]             = useState([]);
   const [healthRecords, setHealthRecords]   = useState([]);
   const [medTab, setMedTab]                 = useState('due');
-  const [medicines, setMedicines]           = useState([
+  const [medicines] = useState([
     { id: 1, name: 'Aspirin',    dosage: '75mg',  patient: 'Ramesh Kumar', schedule: '1 Tablet · After Lunch',  time: '01:00 PM', status: 'ongoing' },
     { id: 2, name: 'Metformin',  dosage: '500mg', patient: 'Radha Joshi',  schedule: '1 Tablet · After Dinner', time: '08:00 PM', status: 'ongoing' },
     { id: 3, name: 'Calcium',    dosage: '500mg', patient: 'Sunita Bhatia',schedule: '1 Tablet · Morning',      time: '08:00 AM', status: 'paused'  },

@@ -19,7 +19,7 @@ const LiveCare = () => {
         setActiveBooking(active);
       }).catch(err => console.error('Error:', err));
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <DashboardLayout>

@@ -63,7 +63,7 @@ const S = {
 
   // Tabs
   tabsRow: { display: 'flex', gap: 4, marginBottom: 20, borderBottom: '1px solid #e8e8e8', paddingBottom: 0 },
-  tab: (active) => ({ padding: '8px 16px', cursor: 'pointer', fontWeight: active ? 600 : 400, color: active ? '#111' : '#888', borderBottom: active ? '2px solid #111' : '2px solid transparent', background: 'none', border: 'none', borderBottom: active ? '2px solid #111' : '2px solid transparent', fontSize: 13, marginBottom: -1 }),
+  tab: (active) => ({ padding: '8px 16px', cursor: 'pointer', fontWeight: active ? 600 : 400, color: active ? '#111' : '#888', borderBottom: active ? '2px solid #111' : '2px solid transparent', background: 'none', border: 'none', fontSize: 13, marginBottom: -1 }),
 
   // Search + button row
   searchRow: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 },
@@ -150,7 +150,7 @@ const ACTIVITIES = [
   { id: 5, name: 'Meena R.',  text: 'Feedback submitted for caregiver',      time: '5 hr ago' },
 ];
 
-const CHART_BARS = [40, 55, 35, 70, 60, 80, 65, 90, 75, 85, 70, 95];
+// const CHART_BARS = [40, 55, 35, 70, 60, 80, 65, 90, 75, 85, 70, 95]; // reserved for future chart
 
 // Simple SVG line chart points
 function linePoints(data, w, h) {

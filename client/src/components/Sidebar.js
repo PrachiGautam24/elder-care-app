@@ -5,7 +5,7 @@ import { AuthContext } from '../context/AuthContext';
 const Sidebar = ({ onExpandChange }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { logout, user } = useContext(AuthContext);
+  const { logout } = useContext(AuthContext);
   const [isExpanded, setIsExpanded] = useState(false);
 
   const menuItems = [

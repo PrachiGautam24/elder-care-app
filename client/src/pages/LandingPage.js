@@ -381,9 +381,9 @@ const LandingPage = () => {
 
           <div style={styles.footerColumn}>
             <h4 style={styles.footerTitle}>Legal</h4>
-            <a href="#" style={styles.footerLink}>Privacy Policy</a>
-            <a href="#" style={styles.footerLink}>Terms of Service</a>
-            <a href="#" style={styles.footerLink}>Compliance</a>
+            <button style={styles.footerLink}>Privacy Policy</button>
+            <button style={styles.footerLink}>Terms of Service</button>
+            <button style={styles.footerLink}>Compliance</button>
           </div>
         </div>
 
