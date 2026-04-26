@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const path = require('path');
 require('dotenv').config();
 
 const authRoutes = require('./routes/auth');
@@ -18,7 +17,10 @@ const aiRoutes = require('./routes/ai');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: process.env.CLIENT_URL || '*',
+  credentials: true,
+}));
 app.use(express.json());
 
 // Database connection
@@ -40,13 +42,8 @@ app.use('/api/ai', aiRoutes);
 app.use('/api/jobs', bookingRoutes);
 app.use('/api/earnings', caregiverRoutes);
 
-// Serve static files from React build
-app.use(express.static(path.join(__dirname, '../client/build')));
-
-// All other routes serve React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
+// Health check
+app.get('/', (req, res) => res.json({ status: 'Elder Care API running' }));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
