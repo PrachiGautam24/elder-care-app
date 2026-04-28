@@ -318,7 +318,7 @@ const NurseDashboard = () => {
   };
 
   // ── remove patient ────────────────────────────────────────────────────────
-  const removePatient = async (id) => {
+  const removePatient = async (id) => { // eslint-disable-line no-unused-vars
     setPatients(prev => prev.filter(p => p.id !== id));
     try { await deletePatient(id); } catch (e) { console.error(e); }
   };
@@ -1165,7 +1165,7 @@ const NurseDashboard = () => {
               <div style={card}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
                   {appointments.map((a, idx) => {
-                    const pt = patients.find(p => p.id === a.patientId);
+                    // const pt = patients.find(p => p.id === a.patientId); // reserved for future use
                     return (
                       <div key={a.id} style={{
                         display: 'flex', alignItems: 'center', gap: 14,
